@@ -7,6 +7,7 @@ require("dotenv").config();
 const app = express();
 app.use(cors());
 app.use(express.json());
+PORT = 500;
 
 const db = mysql.createConnection({
     host: "localhost",
@@ -163,6 +164,6 @@ app.get("/all-books", (req, res) => {
     });
   });
   
-app.listen(5000, () => {
+app.listen(PORT, () => {
     console.log("Server is running on port 5000");
 });
